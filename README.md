@@ -15,4 +15,4 @@
 
 ## Linux installation
 
-There currently is not a distribution for Linux machines. If you would like for me to create a distribution, then send me an email at hmallen@mit.edu.
+I have not created a Linux distribution yet. If you wish to run this on a Linux machine, email me at hmallen@mit.edu and I'll create an installer.
