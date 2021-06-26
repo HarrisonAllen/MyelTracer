@@ -913,7 +913,7 @@ class HButtonSlider(QWidget):
         self.value_label = QLineEdit(self)
         self.value_label.setText('{}'.format(self.slider.value()))
         self.slider.valueChanged.connect(self.set_text)
-        self.value_label.setReadOnly(True) # TODO: make this editable
+        self.value_label.setReadOnly(True)
         size_policy = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Maximum)
         self.value_label.setSizePolicy(size_policy)
 
@@ -1280,7 +1280,7 @@ class DisplayImageWidget(QWidget):
 
         # Credits Section
         credits_text = '<p>Created by Feng Lab, code written by Harrison Allen</p>'
-        # credits_text += "<p><a href='https://github.mit.edu/hmallen/MyelTracer'>View on GitHub</a></p>"
+        credits_text += "<p><a href='https://github.com/HarrisonAllen/MyelTracer'>View source on GitHub</a></p>"
         # credits_text += "<p><a href='https://google.com'>View the paper</a></p>" # TODO: Replace with real link
         self.credits = QLabel(credits_text)
         self.credits.setOpenExternalLinks(True)
