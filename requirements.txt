@@ -1,0 +1,7 @@
+certifi==2020.4.5.1
+numpy==1.18.2
+opencv-python-headless==4.2.0.34
+PyQt5==5.14.2
+PyQt5-sip==12.7.2
+wincertstore==0.2
+fbs
