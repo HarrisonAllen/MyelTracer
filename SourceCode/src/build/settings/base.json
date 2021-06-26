@@ -1,0 +1,6 @@
+{
+    "app_name": "MyelTracer",
+    "author": "Harrison Allen",
+    "main_module": "src/main/python/main.py",
+    "version": "1.3.0"
+}
