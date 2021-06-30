@@ -40,7 +40,8 @@ Want to customize MyelTracer to fit your needs? Here's what you need to get star
 
 1. Download (or clone) this repository
 2. Set up a Python 3.6 environment
-    * I personally use [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+
+    I personally use [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
     1. Create the environment by typing `conda create --name MyelTracer python=3.6`
     2. Activate the environment by typing `conda activate MyelTracer`
 3. `cd` to the repository on your computer in the terminal
