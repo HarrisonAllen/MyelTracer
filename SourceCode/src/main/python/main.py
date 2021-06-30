@@ -1279,9 +1279,10 @@ class DisplayImageWidget(QWidget):
         self.toolbar_layout.addStretch()
 
         # Credits Section
-        credits_text = '<p>Created by Feng Lab, code written by Harrison Allen</p>'
-        credits_text += "<p><a href='https://github.com/HarrisonAllen/MyelTracer'>View source on GitHub</a></p>"
-        # credits_text += "<p><a href='https://google.com'>View the paper</a></p>" # TODO: Replace with real link
+        credits_text = f'<p>MyelTracer v{__version__}</p>'
+        credits_text += "<p>Created by <a href='https://fenglaboratory.org/'>Feng Lab</a>, code written by <a href='mailto:harrisonallen555@gmail.com'>Harrison Allen</a></p>"
+        credits_text += "<p>Check out the <a href='https://github.com/HarrisonAllen/MyelTracer'>source code on GitHub</a></p>"
+        credits_text += "<p>Enjoying MyelTracer? Cite our <a href='https://doi.org/10.1523/ENEURO.0558-20.2021'>eNeuro publication</a></p>"
         self.credits = QLabel(credits_text)
         self.credits.setOpenExternalLinks(True)
         self.credits.setAlignment(Qt.AlignRight|Qt.AlignBottom)
