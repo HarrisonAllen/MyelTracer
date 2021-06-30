@@ -4,18 +4,30 @@
 
 Requirements: Windows 10
 
-1. Download `Windows/MyelTracerSetup.exe`
+1. Download [the Windows installer](https://github.com/HarrisonAllen/MyelTracer/raw/master/Windows/MyelTracerSetup.exe)
 2. Run `MyelTracerSetup.exe`
-3. MyelTracer can now be run from the start menu
+   * You may see the following warning when installing:
+
+     ![Windows Warning](https://github.com/HarrisonAllen/MyelTracer/blob/master/readme_resources/WindowsWarning.png)
+   * Click on `More info` to get the following message:
+
+     ![Windows Warning, more info](https://github.com/HarrisonAllen/MyelTracer/blob/master/readme_resources/WindowsWarningBypass.png)
+   * Finally, click `Run anyway`
+3. Follow the instructions in the installer
+4. MyelTracer can now be run from the start menu
 
 ## Mac installation
 
 Requirements: MacOS High Sierra (10.13) or higher
 
-1. Download `Mac/MyelTracer.dmg`
+1. Download [the MacOS installer](https://github.com/HarrisonAllen/MyelTracer/raw/master/Mac/MyelTracer.dmg)
 2. Open `MyelTracer.dmg`
 3. Drag the `MyelTracer` icon to the `Applications` shortcut in the volume
 4. MyelTracer can now be run from the `Applications` folder
+   * You may see the following warning the first time you run the application:
+
+     ![MacOS Warning](https://github.com/HarrisonAllen/MyelTracer/blob/master/readme_resources/MacOSWarning.png)
+   * Just click `Open` to launch MyelTracer
 
 ## Development
 
@@ -43,7 +55,7 @@ Software is packaged with [fman build system](https://build-system.fman.io/).
 
 ### Running the software
 
-1. In the `Source Code` directory, type `fbs run`
+1. In the `SourceCode` directory, type `fbs run`
 
 ### Packaging the software
 
