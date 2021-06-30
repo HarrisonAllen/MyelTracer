@@ -1,4 +1,7 @@
 # MyelTracer
+- [Windows Installation](#windows-installation)
+- [MacOS Installation](#macos-installation)
+- [Development](#development)
 
 ## Windows installation
 
@@ -16,7 +19,7 @@ Requirements: Windows 10
 3. Follow the instructions in the installer
 4. MyelTracer can now be run from the start menu
 
-## Mac installation
+## MacOS installation
 
 Requirements: MacOS High Sierra (10.13) or higher
 
