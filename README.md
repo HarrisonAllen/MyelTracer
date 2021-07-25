@@ -7,7 +7,7 @@
 
 Requirements: Windows 10
 
-1. Download [the Windows installer](https://github.com/HarrisonAllen/MyelTracer/raw/master/Windows/MyelTracerSetup.exe)
+1. Download [the Windows installer](https://github.com/HarrisonAllen/MyelTracer/releases/download/v1.3/MyelTracerSetup.exe)
 2. Run `MyelTracerSetup.exe`
    * You may see the following warning when installing:
 
@@ -23,7 +23,7 @@ Requirements: Windows 10
 
 Requirements: MacOS High Sierra (10.13) or higher
 
-1. Download [the MacOS installer](https://github.com/HarrisonAllen/MyelTracer/raw/master/Mac/MyelTracer.dmg)
+1. Download [the MacOS installer](https://github.com/HarrisonAllen/MyelTracer/releases/download/v1.3/MyelTracer.dmg)
 2. Open `MyelTracer.dmg`
 3. Drag the `MyelTracer` icon to the `Applications` shortcut in the volume
 4. MyelTracer can now be run from the `Applications` folder
