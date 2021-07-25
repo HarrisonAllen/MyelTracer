@@ -1,4 +1,5 @@
 # MyelTracer
+Using MyelTracer for a publication? Cite the [MyelTracer publication](https://doi.org/10.1523/ENEURO.0558-20.2021)!
 - [Windows Installation](#windows-installation)
 - [MacOS Installation](#macos-installation)
 - [Development](#development)
