@@ -12,7 +12,7 @@ from math import sqrt, pi
 from fbs_runtime.application_context.PyQt5 import ApplicationContext
 
 # Current version of the software
-__version__ = '1.3'
+__version__ = '1.3.1'
 COMPATIBLE_VERSIONS = [
     '0.1',
     '0.2',
@@ -24,7 +24,8 @@ COMPATIBLE_VERSIONS = [
     '1.0',
     '1.1',
     '1.2',
-    '1.3'
+    '1.3',
+    '1.3.1'
 ]
 
 class ToolMode(Enum):
@@ -1455,6 +1456,8 @@ class DisplayImageWidget(QWidget):
                 self.draw_size = import_data['draw_size']
             if 'filename' in import_data and 'quality' in import_data:
                 file = import_data['filename']
+                if isinstance(file, bytes):
+                    file = file.decode('utf-8')
                 quality = import_data['quality']
                 if path.exists(file):
                     self.new(file, quality)
@@ -1759,7 +1762,7 @@ class Axon_Editor:
 
     def load_image(self, filename):
         """Load image from filename (str)"""
-        self.image = cv.imread(self.filename)
+        self.image = cv.imdecode(np.fromfile(filename, dtype=np.uint8), cv.IMREAD_COLOR)
         self.filename = filename
 
     def adjust_image(self):
@@ -3030,7 +3033,9 @@ class Axon_Editor:
                            cv.FONT_HERSHEY_SIMPLEX, self.font_size, color, 
                            int(2*self.font_size))
 
-        cv.imwrite(new_filename, export_image)
+        is_success, im_buf_arr = cv.imencode(os.path.splitext(new_filename)[-1], export_image)
+        im_buf_arr.tofile(new_filename)
+        
 
     def scale_contour(self, contour, scaling):
         """
@@ -3066,7 +3071,7 @@ class Axon_Editor:
         self.saved_contours = state['contours']
         self.lines = state['lines']
         self.counters = state['counters']
-
+        
     def save(self, filename, base_info):
         """
         Writes all of the current program data to filename (str) as literal
@@ -3088,7 +3093,9 @@ class Axon_Editor:
         export_data['eraser_size'] = self.eraser_size
         export_data['lines'] = self.lines
         export_data['counters'] = self.counters
-        export_data['filename'] = self.filename
+        valid_filename = self.filename.encode('utf-8')
+        export_data['filename'] = valid_filename
+
         with open(filename, 'w') as f:
             f.write(str(export_data))
 
