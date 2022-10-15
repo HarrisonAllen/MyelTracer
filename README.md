@@ -8,7 +8,7 @@ Using MyelTracer for a publication? Cite the [MyelTracer publication](https://do
 
 Requirements: Windows 10
 
-1. Download [the Windows installer](https://github.com/HarrisonAllen/MyelTracer/releases/download/v1.3/MyelTracerSetup.exe)
+1. Download [the Windows installer](https://github.com/HarrisonAllen/MyelTracer/releases/download/v1.3.1/MyelTracerSetup.exe)
 2. Run `MyelTracerSetup.exe`
    * You may see the following warning when installing:
 
