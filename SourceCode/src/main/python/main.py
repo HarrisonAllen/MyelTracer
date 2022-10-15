@@ -12,7 +12,7 @@ from math import sqrt, pi
 from fbs_runtime.application_context.PyQt5 import ApplicationContext
 
 # Current version of the software
-__version__ = '1.3'
+__version__ = '1.4'
 COMPATIBLE_VERSIONS = [
     '0.1',
     '0.2',
@@ -24,7 +24,8 @@ COMPATIBLE_VERSIONS = [
     '1.0',
     '1.1',
     '1.2',
-    '1.3'
+    '1.3',
+    '1.4'
 ]
 
 class ToolMode(Enum):
@@ -1759,7 +1760,7 @@ class Axon_Editor:
 
     def load_image(self, filename):
         """Load image from filename (str)"""
-        self.image = cv.imread(self.filename)
+        self.image = cv.imdecode(np.fromfile(filename, dtype=np.uint8), cv.IMREAD_COLOR)
         self.filename = filename
 
     def adjust_image(self):
@@ -3030,7 +3031,9 @@ class Axon_Editor:
                            cv.FONT_HERSHEY_SIMPLEX, self.font_size, color, 
                            int(2*self.font_size))
 
-        cv.imwrite(new_filename, export_image)
+        is_success, im_buf_arr = cv.imencode(os.path.splitext(new_filename)[-1], export_image)
+        im_buf_arr.tofile(new_filename)
+        
 
     def scale_contour(self, contour, scaling):
         """
