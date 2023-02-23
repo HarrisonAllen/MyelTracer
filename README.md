@@ -4,6 +4,8 @@ Using MyelTracer for a publication? Cite the [MyelTracer publication](https://do
 - [MacOS Installation](#macos-installation)
 - [Development](#development)
 
+![MyelTracer Screenshot](https://github.com/HarrisonAllen/MyelTracer/blob/master/readme_resources/MyelTracer.png)
+
 ## Windows installation
 
 Requirements: Windows 10
