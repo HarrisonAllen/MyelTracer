@@ -1,7 +1,7 @@
 # MyelTracer
 Using MyelTracer for a publication? Cite the [MyelTracer publication](https://doi.org/10.1523/ENEURO.0558-20.2021)!
 - [Windows Installation](#windows-installation)
-- [MacOS Installation](#macos-installation)
+- [macOS Installation](#macOS-installation)
 - [Development](#development)
 
 ![MyelTracer Screenshot](https://github.com/HarrisonAllen/MyelTracer/blob/master/readme_resources/MyelTracer.png)
@@ -22,17 +22,20 @@ Requirements: Windows 10
 3. Follow the instructions in the installer
 4. MyelTracer can now be run from the start menu
 
-## MacOS installation
+## macOS installation
 
-Requirements: MacOS High Sierra (10.13) or higher
+Requirements: macOS High Sierra (10.13) or higher
 
-1. Download [the MacOS installer](https://github.com/HarrisonAllen/MyelTracer/releases/download/v1.3/MyelTracer.dmg)
+1. Download the macOS installer [the macOS installer](https://github.com/HarrisonAllen/MyelTracer/releases/download/v1.3/MyelTracer.dmg)
+  
+   * For macOS Sequoia (15.5) or higher: [download](https://github.com/HarrisonAllen/MyelTracer/releases/download/v1.4.0/MyelTracer.dmg)
+   * For older versions, macOS High Sierra (10.13) or higher: [download](https://github.com/HarrisonAllen/MyelTracer/releases/download/v1.3/MyelTracer.dmg)
 2. Open `MyelTracer.dmg`
 3. Drag the `MyelTracer` icon to the `Applications` shortcut in the volume
 4. MyelTracer can now be run from the `Applications` folder
    * You may see the following warning the first time you run the application:
 
-     ![MacOS Warning](https://github.com/HarrisonAllen/MyelTracer/blob/master/readme_resources/MacOSWarning.png)
+     ![macOS Warning](https://github.com/HarrisonAllen/MyelTracer/blob/master/readme_resources/macOSWarning.png)
    * Just click `Open` to launch MyelTracer
 
 ## Development
@@ -42,13 +45,15 @@ Want to customize MyelTracer to fit your needs? Here's what you need to get star
 ### Setup
 
 1. Download (or clone) this repository
-2. Set up a Python 3.6 environment
+2. Set up a Python 3.9 environment
 
     I personally use [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
     1. Create the environment by typing `conda create --name MyelTracer python=3.6`
     2. Activate the environment by typing `conda activate MyelTracer`
 3. `cd` to the repository on your computer in the terminal
 4. Type `pip install -r requirements.txt`
+    
+    * Note: using Python 3.9 requires the pro version of FBS. If you do not wish to purchase the pro version, you can install the depedencies using `requirements-python-3_6.txt` in a Python 3.6 environment
 
 ### Editing the software
 
@@ -70,4 +75,4 @@ Software is packaged with [fman build system](https://build-system.fman.io/).
 2. Type `fbs installer`
 
 This will generate a standalone installer for the operating system that you are currently using. 
-* For example, if you are using MacOS High Sierra 10.13, then this will generate an installer that should work on MacOS 10.13 and up. To create a Windows installer, you would have to repeat this process on a Windows machine.
+* For example, if you are using macOS High Sierra 10.13, then this will generate an installer that should work on macOS 10.13 and up. To create a Windows installer, you would have to repeat this process on a Windows machine.

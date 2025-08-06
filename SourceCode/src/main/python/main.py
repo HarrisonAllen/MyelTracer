@@ -12,7 +12,7 @@ from math import sqrt, pi
 from fbs_runtime.application_context.PyQt5 import ApplicationContext
 
 # Current version of the software
-__version__ = '1.3.1'
+__version__ = '1.4.0'
 COMPATIBLE_VERSIONS = [
     '0.1',
     '0.2',
@@ -25,7 +25,8 @@ COMPATIBLE_VERSIONS = [
     '1.1',
     '1.2',
     '1.3',
-    '1.3.1'
+    '1.3.1',
+    '1.4.0'
 ]
 
 class ToolMode(Enum):
@@ -298,7 +299,7 @@ class MainWindow(QMainWindow):
         self.setStatusBar(QStatusBar(self))
         self.show()
 
-        self.directory = os.getcwd() # for autosaves
+        self.directory = os.path.join(os.path.expanduser("~")) # for autosaves
 
         # Setup the autosave timer
         self.timer = QTimer(self)
@@ -336,8 +337,11 @@ class MainWindow(QMainWindow):
 
     def new(self):
         """Loads in an image file for editing"""
+        options = QFileDialog.Options()
+        options |= QFileDialog.DontUseNativeDialog
         self.filename, _extensions = QFileDialog.getOpenFileName(
-            win, 'Open new image', filter=image_file_extensions)
+            win, 'Open new image', self.directory, filter=image_file_extensions,
+            options=options)
         if not self.filename:
             return
         self.save_filename = None
@@ -516,8 +520,11 @@ class MainWindow(QMainWindow):
             'Counters': counters_checkbox.isChecked()
         }
 
+        options = QFileDialog.Options()
+        options |= QFileDialog.DontUseNativeDialog
         self.export_directory = QFileDialog.getExistingDirectory(
-            self, "Select Directory to Export to")
+            self, "Select Directory to Export to", self.directory,
+            options=options)
         if self.export_directory:
             try:
                 self.image_view.export(
@@ -532,10 +539,12 @@ class MainWindow(QMainWindow):
         
     def save_as(self):
         """Saves current session to new file"""
+        options = QFileDialog.Options()
+        options |= QFileDialog.DontUseNativeDialog
         save_filename, _extensions = QFileDialog.getSaveFileName(
             self, 'Save Data as...',
             self.directory + '/'+ self.image_view.get_filename() + '-data.txt',
-            'Data file (*.txt)')
+            'Data file (*.txt)', options=options)
         if save_filename:
             try:
                 self.image_view.save(save_filename)
@@ -569,9 +578,9 @@ class MainWindow(QMainWindow):
     @pyqtSlot()
     def autosave(self):
         """Automatically saves file as a backup in root directory"""
-        autosave_path = self.directory + '/backups'
+        autosave_path = self.directory + '/myeltracer-backups'
         if not os.path.isdir(autosave_path):
-            os.mkdir(autosave_path)
+            os.makedirs(autosave_path)
         if self.image_view.get_filename():
             autosave_filename = (autosave_path 
                                  + '/' + self.image_view.get_filename() 
@@ -585,9 +594,11 @@ class MainWindow(QMainWindow):
 
 
     def open(self):
-
+        options = QFileDialog.Options()
+        options |= QFileDialog.DontUseNativeDialog
         self.filename, _extensions = QFileDialog.getOpenFileName(
-            win, 'Open data file', filter='Data file (*.txt)')
+            win, 'Open data file', self.directory, filter='Data file (*.txt)',
+            options=options)
         if not self.filename:
             return
         
