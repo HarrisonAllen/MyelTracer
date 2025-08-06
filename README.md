@@ -36,15 +36,23 @@ Requirements: macOS High Sierra (10.13) or higher
 
 You may see one of the following warnings/errors when trying to run MyelTracer:
 
-* ![macOS Warning](https://github.com/HarrisonAllen/MyelTracer/blob/master/readme_resources/MacOSWarning.png)
-   * Just click `Open` to launch MyelTracer
-* ![macOS Damaged](https://github.com/HarrisonAllen/MyelTracer/blob/master/readme_resources/MacOSDamaged.png)
-    * To get around this:
-        1. Press `Cancel`
-        2. Open up `Terminal`
-        3. Copy and paste the following command  `xattr -r -d com.apple.quarantine /Applications/MyelTracer.app`
-            * This allows the app to run despite strict code signing restrictions implemented in recent versions of macOS
-        4. You should now be able to launch MyelTracer
+### "Downloaded from the internet" warning
+
+![macOS Warning](https://github.com/HarrisonAllen/MyelTracer/blob/master/readme_resources/MacOSWarning.png)
+
+* Just click `Open` to launch MyelTracer
+ 
+### "Damaged and can't be opened" error
+
+![macOS Damaged](https://github.com/HarrisonAllen/MyelTracer/blob/master/readme_resources/MacOSDamaged.png)
+
+To get around this:
+
+1. Press `Cancel`
+2. Open up the `Terminal` application
+3. Copy and paste the following command  `xattr -r -d com.apple.quarantine /Applications/MyelTracer.app` then press the `enter`/`return` key on your keyboard
+    * This allows the app to run despite strict code signing restrictions implemented in recent versions of macOS
+4. You should now be able to launch MyelTracer
 
 ## Development
 
