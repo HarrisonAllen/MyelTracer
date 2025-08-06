@@ -33,10 +33,18 @@ Requirements: macOS High Sierra (10.13) or higher
 2. Open `MyelTracer.dmg`
 3. Drag the `MyelTracer` icon to the `Applications` shortcut in the volume
 4. MyelTracer can now be run from the `Applications` folder
-   * You may see the following warning the first time you run the application:
 
-     ![macOS Warning](https://github.com/HarrisonAllen/MyelTracer/blob/master/readme_resources/MacOSWarning.png)
+You may see one of the following warnings/errors when trying to run MyelTracer:
+
+* ![macOS Warning](https://github.com/HarrisonAllen/MyelTracer/blob/master/readme_resources/MacOSWarning.png)
    * Just click `Open` to launch MyelTracer
+* ![macOS Damaged](https://github.com/HarrisonAllen/MyelTracer/blob/master/readme_resources/MacOSDamaged.png)
+    * To get around this:
+        1. Press `Cancel`
+        2. Open up `Terminal`
+        3. Copy and paste the following command  `xattr -r -d com.apple.quarantine /Applications/MyelTracer.app`
+            * This allows the app to run despite strict code signing restrictions implemented in recent versions of macOS
+        4. You should now be able to launch MyelTracer
 
 ## Development
 
