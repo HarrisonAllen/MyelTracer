@@ -35,7 +35,7 @@ Requirements: macOS High Sierra (10.13) or higher
 4. MyelTracer can now be run from the `Applications` folder
    * You may see the following warning the first time you run the application:
 
-     ![macOS Warning](https://github.com/HarrisonAllen/MyelTracer/blob/master/readme_resources/macOSWarning.png)
+     ![macOS Warning](https://github.com/HarrisonAllen/MyelTracer/blob/master/readme_resources/MacOSWarning.png)
    * Just click `Open` to launch MyelTracer
 
 ## Development
