@@ -2102,7 +2102,6 @@ class Axon_Editor:
             for c in outer:
                 if any(np.array_equal(c, s) for s in seen):
                     continue
-                print("Pre error:", c, a_point)
                 
                 if (cv.pointPolygonTest(c, a_xy, False) > 0 or 
                     cv.pointPolygonTest(c, a_point, False) >= 0):
