@@ -26,10 +26,10 @@ Requirements: Windows 10
 
 Requirements: macOS High Sierra (10.13) or higher
 
-1. Download the macOS installer [the macOS installer](https://github.com/HarrisonAllen/MyelTracer/releases/download/v1.3/MyelTracer.dmg)
+1. Download the macOS installer [the macOS installer (v1.4.1)](https://github.com/HarrisonAllen/MyelTracer/releases/download/v1.4.1/MyelTracer.dmg)
   
-   * For macOS Sequoia (15.5) or higher: [download](https://github.com/HarrisonAllen/MyelTracer/releases/download/v1.4.0/MyelTracer.dmg)
-   * For older versions, macOS High Sierra (10.13) or higher: [download](https://github.com/HarrisonAllen/MyelTracer/releases/download/v1.3/MyelTracer.dmg)
+   * For macOS Sequoia (15.5) or higher: [download v1.4.1](https://github.com/HarrisonAllen/MyelTracer/releases/download/v1.4.1/MyelTracer.dmg)
+   * For older versions, macOS High Sierra (10.13) or higher: [download v1.3](https://github.com/HarrisonAllen/MyelTracer/releases/download/v1.3/MyelTracer.dmg)
 2. Open `MyelTracer.dmg`
 3. Drag the `MyelTracer` icon to the `Applications` shortcut in the volume
 4. MyelTracer can now be run from the `Applications` folder
