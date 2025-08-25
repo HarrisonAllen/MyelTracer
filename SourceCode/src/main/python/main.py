@@ -12,7 +12,7 @@ from math import sqrt, pi
 from fbs_runtime.application_context.PyQt5 import ApplicationContext
 
 # Current version of the software
-__version__ = '1.4.0'
+__version__ = '1.4.1'
 COMPATIBLE_VERSIONS = [
     '0.1',
     '0.2',
@@ -26,7 +26,8 @@ COMPATIBLE_VERSIONS = [
     '1.2',
     '1.3',
     '1.3.1',
-    '1.4.0'
+    '1.4.0',
+    '1.4.1'
 ]
 
 class ToolMode(Enum):
@@ -2077,7 +2078,7 @@ class Axon_Editor:
             paired_up = [a]
             M = cv.moments(a)
             a_xy = (int(M["m10"] / M["m00"]),int(M["m01"] / M["m00"]))
-            a_point = tuple(a[0][0])
+            a_point = (int(a[0][0][0]), int(a[0][0][1]))
 
             is_inner = False
             
@@ -2101,6 +2102,8 @@ class Axon_Editor:
             for c in outer:
                 if any(np.array_equal(c, s) for s in seen):
                     continue
+                print("Pre error:", c, a_point)
+                
                 if (cv.pointPolygonTest(c, a_xy, False) > 0 or 
                     cv.pointPolygonTest(c, a_point, False) >= 0):
                     paired_up.append(c)
