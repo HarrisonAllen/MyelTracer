@@ -10,9 +10,10 @@ from PyQt5.QtCore import *
 from enum import Enum
 from math import sqrt, pi
 from fbs_runtime.application_context.PyQt5 import ApplicationContext
+import traceback
 
 # Current version of the software
-__version__ = '1.4.1'
+__version__ = '1.4.2'
 COMPATIBLE_VERSIONS = [
     '0.1',
     '0.2',
@@ -27,7 +28,8 @@ COMPATIBLE_VERSIONS = [
     '1.3',
     '1.3.1',
     '1.4.0',
-    '1.4.1'
+    '1.4.1',
+    '1.4.2'
 ]
 
 class ToolMode(Enum):
@@ -355,7 +357,8 @@ class MainWindow(QMainWindow):
             except Exception as e:
                 message = "<font color='red'><b>Failed to open image.</b> \
                            </font> Please check that you selected the correct \
-                           file and try again."
+                           file and try again.<br><pre align=left>" + \
+                           self.filename + "\n" + traceback.format_exc() + "</pre>"
                 self.displayMessage(message, 'Failed to open')
                 print(e)
                 return
