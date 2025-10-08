@@ -54,6 +54,14 @@ To get around this:
     * This allows the app to run despite strict code signing restrictions implemented in recent versions of macOS
 4. You should now be able to launch MyelTracer
 
+### Files missing or image doesn't open
+
+It seems like there have been some security updates with the latest MacOS updates. Try the following:
+
+1. Go to "System Settings" -> "Privacy and Security" -> "Full Disk Access"
+2. Click on the small "+" sign
+3. Find MyelTracer in the "Applications" folder and click "Open"
+
 ## Development
 
 Want to customize MyelTracer to fit your needs? Here's what you need to get started.
