@@ -10,7 +10,7 @@ Using MyelTracer for a publication? Cite the [MyelTracer publication](https://do
 
 Requirements: Windows 10
 
-1. Download [the Windows installer](https://github.com/HarrisonAllen/MyelTracer/releases/download/v1.3.1/MyelTracerSetup.exe)
+1. Download [the Windows installer](https://github.com/HarrisonAllen/MyelTracer/releases/download/v1.4.2/MyelTracerSetup.exe)
 2. Run `MyelTracerSetup.exe`
    * You may see the following warning when installing:
 
@@ -26,9 +26,9 @@ Requirements: Windows 10
 
 Requirements: macOS High Sierra (10.13) or higher
 
-1. Download the macOS installer [the macOS installer (v1.4.1)](https://github.com/HarrisonAllen/MyelTracer/releases/download/v1.4.1/MyelTracer.dmg)
+1. Download the macOS installer [the macOS installer (v1.4.2)](https://github.com/HarrisonAllen/MyelTracer/releases/download/v1.4.2/MyelTracer.dmg)
   
-   * For macOS Sequoia (15.5) or higher: [download v1.4.1](https://github.com/HarrisonAllen/MyelTracer/releases/download/v1.4.1/MyelTracer.dmg)
+   * For macOS Sequoia (15.5) or higher: [download v1.4.2](https://github.com/HarrisonAllen/MyelTracer/releases/download/v1.4.2/MyelTracer.dmg)
    * For older versions, macOS High Sierra (10.13) or higher: [download v1.3](https://github.com/HarrisonAllen/MyelTracer/releases/download/v1.3/MyelTracer.dmg)
 2. Open `MyelTracer.dmg`
 3. Drag the `MyelTracer` icon to the `Applications` shortcut in the volume
@@ -72,7 +72,7 @@ Want to customize MyelTracer to fit your needs? Here's what you need to get star
 2. Set up a Python 3.9 environment
 
     I personally use [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
-    1. Create the environment by typing `conda create --name MyelTracer python=3.6`
+    1. Create the environment by typing `conda create --name MyelTracer python=3.9`
     2. Activate the environment by typing `conda activate MyelTracer`
 3. `cd` to the repository on your computer in the terminal
 4. Type `pip install -r requirements.txt`
